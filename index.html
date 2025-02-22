@@ -9,12 +9,17 @@
 		<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			#daiji {color: red;}
+			#daiji {
+			  color: red;
+			}
 			body{
 			  background-color: #EAFFFF;
 			  font-family: "Yusei Magic", serif;
 			  font-weight: 400;
 			  font-style: normal;
+			}
+			#midashi{
+			  color: #000000;
 			}
 			.haikei{
 			  width: 90%;
@@ -29,12 +34,29 @@
 			  padding-left: 2%;
 			}
 			@media (prefers-color-scheme: dark) {
+			  #daiji {
+			    color: red;
+			  }
+			  #midashi {
+			    color: #FFFFFF;
+			  }
 			  body {
 			    background-color: #002020;
+			    font-family: "Yusei Magic", serif;
+			    font-weight: 400;
+			    font-style: normal;
 			  }
-
  			 .haikei {
-  			  color: #fff;
+  			  width: 90%;
+			  margin: 2.5%;
+			  height: 20%;
+			  background-color: #002E52;
+			  border-radius: 15px;
+			  line-height: 30px;
+			  color: #CCCCCC;
+			  padding: 0.5%;
+			  padding-right: 2%;
+			  padding-left: 2%;
  			 }
 			}
 
@@ -42,14 +64,14 @@
 	</head>
 
 	<body>
-		<h1>erga0131</h1>
-		<h2>About</h2>
+		<h1 id="midashi">erga0131</h1>
+		<h2 id="midashi">About</h2>
 			<div class="haikei">
 				<p>
 					ergaは「エルガ」と読みます。リアル寄りのコミュニティだとstarlight6470で知られているかもしれません。2025年2月現在、とある私立大学の経済学部生です。広く浅くコンピュータに興味があります。これでも少しずつポートフォリオを更新しています
 				</p>
 			</div>
-		<h2>リンク</h2>
+		<h2 id="midashi">リンク</h2>
 			<div class="haikei">
 				<a href=https://x.com/erga0131>X(旧Twitter)</a></br>
 				<a href=https://github.com/starlight6470re>GitHub</a></br>
@@ -57,7 +79,7 @@
 				<a href=http://starlight6470.mydns.jp>自宅サーバ(不定期稼働)</a> →　<a href=https://hetrixtools.com/report/uptime/5f680cc6c63a121c0655414a7e2fd7d6/>稼働状況</a><br>
 				<p>自宅サーバはネットワークとLinuxの個人的な学習用で、外部への提供を主目的としたものではありません。Raspberry Pi上のDockerでnginxを動かすことによって稼働させています。</p>
 			</div>
-		<h2>興味</h2>
+		<h2 id="midashi">興味</h2>
 			<div class="haikei">
 				<h3 id="daiji">「興味」と「スキル」は異なります！</h3>
 				<ul>
