@@ -37,6 +37,9 @@ footer{
 }
 
 @media (prefers-color-scheme: dark) {
+	#username {
+		color: #FFFFFF;
+	}
 	#midashi {
 	  color: #FFFFFF;
 	}
