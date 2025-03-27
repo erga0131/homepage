@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>erga0131 - ISS’ÇÕ</title>
-    <!--leaflet.js‚Ìg—p‚É•K—v‚ÈJS/CSS-->
+    <title>erga0131 - ISSè¿½è·¡</title>
+    <!--leaflet.jsã®ä½¿ç”¨ã«å¿…è¦ãªJS/CSS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin="" />
@@ -15,24 +15,24 @@
 
 <body>
     <div id="navbar"></div>
-	<script src="../nav.js"></script>
+	<script src="nav.js"></script>
     
     <div id="map" style="height: 95vh;"></div>
     >
     <script>
-        //“ú–{ŒoˆÜ“xŒ´“_‚ğ’†S‚Æ‚·‚éƒ}ƒbƒv‚ğì¬
+        //æ—¥æœ¬çµŒç·¯åº¦åŸç‚¹ã‚’ä¸­å¿ƒã¨ã™ã‚‹ãƒãƒƒãƒ—ã‚’ä½œæˆ
         var map = L.map('map').setView([35.6580992222, 139.7413574722], 3);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        //ƒ}[ƒJ[‚ğlH‰q¯‚Á‚Û‚¢‚Ì‚É•Ï‚¦‚Äƒ|ƒWƒVƒ‡ƒ“Eƒ[ƒ‚É’u‚­
-        var ISS_Icon = L.icon({ iconUrl: 'satellite.png', iconRetinaUrl: 'satellite.png', iconSize: [40, 40], iconAnchor: [20, 20], popupAnchor: [0, -50] });
+        //ãƒãƒ¼ã‚«ãƒ¼ã‚’äººå·¥è¡›æ˜Ÿã£ã½ã„ã®ã«å¤‰ãˆã¦ãƒã‚¸ã‚·ãƒ§ãƒ³ãƒ»ã‚¼ãƒ­ã«ç½®ã
+        var ISS_Icon = L.icon({ iconUrl: 'images/satellite.png', iconRetinaUrl: 'images/satellite.png', iconSize: [40, 40], iconAnchor: [20, 20], popupAnchor: [0, -50] });
         marker = L.marker([0, 0], { icon: ISS_Icon }).addTo(map);
-        marker.bindPopup("ƒf[ƒ^‚ªæ“¾‚Å‚«‚Ü‚¹‚ñ").openPopup();
+        marker.bindPopup("ãƒ‡ãƒ¼ã‚¿ãŒå–å¾—ã§ãã¾ã›ã‚“").openPopup();
 
-        //ƒ}[ƒJ[‚ğISS‚ÌˆÊ’u‚ÉˆÚ“®‚³‚¹‚é
+        //ãƒãƒ¼ã‚«ãƒ¼ã‚’ISSã®ä½ç½®ã«ç§»å‹•ã•ã›ã‚‹
         function plotISS() {    
             var url = 'https://api.wheretheiss.at/v1/satellites/25544';
             fetch(url)
@@ -46,18 +46,18 @@
                     var speed = json.velocity;
                     var unixtime = json.timestamp;
                     marker.setLatLng([lat, lon])
-                    marker.bindPopup("ˆÜ“xF" + Math.round(lat*1000000)/1000000 + "<br>Œo“xF" + Math.round(lon*1000000)/1000000 + "<br>‚“xF" + Math.round(alt*10000)/10000 + "km<br>‘¬“xF" + Math.round(speed*100)/100 + "km/h<br>(" + new Date(unixtime * 1000).toLocaleTimeString() + "“_)");
+                    marker.bindPopup("ç·¯åº¦ï¼š" + Math.round(lat*1000000)/1000000 + "<br>çµŒåº¦ï¼š" + Math.round(lon*1000000)/1000000 + "<br>é«˜åº¦ï¼š" + Math.round(alt*10000)/10000 + "km<br>é€Ÿåº¦ï¼š" + Math.round(speed*100)/100 + "km/h<br>(" + new Date(unixtime * 1000).toLocaleTimeString() + "æ™‚ç‚¹)");
                 })
                 .catch((e) => {
                     console.log(e)
                 })
         }
 
-        //©“®XV
+        //è‡ªå‹•æ›´æ–°
         setInterval(plotISS, 1000);
 
     </script>
-    <!--lH‰q¯ƒAƒCƒRƒ“‚Ì—˜—p‚É‚ÍˆÈ‰º‚Ì•\‹L‚ª•K—v‚Æ‚È‚Á‚Ä‚¢‚é-->
+    <!--äººå·¥è¡›æ˜Ÿã‚¢ã‚¤ã‚³ãƒ³ã®åˆ©ç”¨ã«ã¯ä»¥ä¸‹ã®è¡¨è¨˜ãŒå¿…è¦ã¨ãªã£ã¦ã„ã‚‹-->
     <a href="https://www.flaticon.com/free-icons/space" title="space icons">Space icons created by monkik - Flaticon</a>
 </body>
 
