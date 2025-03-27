@@ -47,6 +47,7 @@
                     var unixtime = json.timestamp;
                     marker.setLatLng([lat, lon])
                     marker.bindPopup("緯度：" + Math.round(lat*1000000)/1000000 + "<br>経度：" + Math.round(lon*1000000)/1000000 + "<br>高度：" + Math.round(alt*10000)/10000 + "km<br>速度：" + Math.round(speed*100)/100 + "km/h<br>(" + new Date(unixtime * 1000).toLocaleTimeString() + "時点)");
+		    map.setView([ lat,lon ]);
                 })
                 .catch((e) => {
                     console.log(e)
