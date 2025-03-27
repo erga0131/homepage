@@ -30,6 +30,7 @@ data =
         padding: 10px 20px;
         display: flex;
         height: 26px;
+        z-index: 100;
     }
     /* ハンバーガーメニュー */
     .hamburger {
