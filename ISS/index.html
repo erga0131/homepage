@@ -23,8 +23,6 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        plotISS()
-
         //マーカーを人工衛星っぽいのに変えてポジション・ゼロに置く
         var ISS_Icon = L.icon({ iconUrl: 'satellite.png', iconRetinaUrl: 'satellite.png', iconSize: [40, 40], iconAnchor: [20, 20], popupAnchor: [0, -50] });
         marker = L.marker([0, 0], { icon: ISS_Icon }).addTo(map);
