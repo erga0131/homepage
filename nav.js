@@ -11,6 +11,7 @@ data =
     <ul class="navbar">
         <li><a href="index.html">HOME</a></li>
         <li><a href="works.html">作品</a></li>
+        <li><a href="ISS">国際宇宙ステーション追跡</a></li>
     </ul>
 </nav>
 
