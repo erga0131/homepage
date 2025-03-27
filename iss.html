@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>erga0131 - ISS追跡</title>
+    <!--leaflet.jsの使用に必要なJS/CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+	<script src="../nav.js"></script>
+    
+    <div id="map" style="height: 95vh;"></div>
+    >
+    <script>
+        //日本経緯度原点を中心とするマップを作成
+        var map = L.map('map').setView([35.6580992222, 139.7413574722], 3);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        //マーカーを人工衛星っぽいのに変えてポジション・ゼロに置く
+        var ISS_Icon = L.icon({ iconUrl: 'satellite.png', iconRetinaUrl: 'satellite.png', iconSize: [40, 40], iconAnchor: [20, 20], popupAnchor: [0, -50] });
+        marker = L.marker([0, 0], { icon: ISS_Icon }).addTo(map);
+        marker.bindPopup("データが取得できません").openPopup();
+
+        //マーカーをISSの位置に移動させる
+        function plotISS() {    
+            var url = 'https://api.wheretheiss.at/v1/satellites/25544';
+            fetch(url)
+                .then((response) => {
+                    return response.json()
+                })
+                .then((json) => {
+                    var lat = json.latitude;
+                    var lon = json.longitude;
+                    var alt = json.altitude;
+                    var speed = json.velocity;
+                    var unixtime = json.timestamp;
+                    marker.setLatLng([lat, lon])
+                    marker.bindPopup("緯度：" + Math.round(lat*1000000)/1000000 + "<br>経度：" + Math.round(lon*1000000)/1000000 + "<br>高度：" + Math.round(alt*10000)/10000 + "km<br>速度：" + Math.round(speed*100)/100 + "km/h<br>(" + new Date(unixtime * 1000).toLocaleTimeString() + "時点)");
+                })
+                .catch((e) => {
+                    console.log(e)
+                })
+        }
+
+        //自動更新
+        setInterval(plotISS, 1000);
+
+    </script>
+    <!--人工衛星アイコンの利用には以下の表記が必要となっている-->
+    <a href="https://www.flaticon.com/free-icons/space" title="space icons">Space icons created by monkik - Flaticon</a>
+</body>
+
+</html>
