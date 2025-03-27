@@ -32,7 +32,7 @@
         //マーカーを人工衛星っぽいのに変えてポジション・ゼロに置く
         var ISS_Icon = L.icon({ iconUrl: 'images/satellite.png', iconRetinaUrl: 'images/satellite.png', iconSize: [40, 40], iconAnchor: [20, 20], popupAnchor: [0, -50] });
         marker = L.marker([0, 0], { icon: ISS_Icon }).addTo(map);
-        marker.bindPopup("データが取得できません").openPopup();
+        marker.bindPopup("データを取得できませんでした").openPopup();
 
         //マーカーをISSの位置に移動させる
         function plotISS() {    
