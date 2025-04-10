@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-	<head>
-		<meta charset="utf-8">
-		<title>erga0131 - 作品</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="images/favicon.ico">
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>erga0131 - 作品</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="images/favicon.ico">
+	<!--works.html限定のstyle-->
+	<style>
+        #work_pic {
+            width: 18vw;
+            margin: 10px;
+            border: double 5px #39c5bb;
+        }
+        #work_name {
+            font-weight: 800;
+			font-size:1.4em;
+        }
+	</style>
+</head>
 
 	<body>
 	<!--navbar-->
@@ -18,9 +30,41 @@
 	<script src="nav.js"></script>
 
 	    <h2>過去の作品</h2>
-            <div class="haikei">
-                <image src="images/illust3470.png" style="width: 40%; display: block; margin: auto;"></image>
-            </div>
+		<div class="haikei">
+			<table>
+				<td><img src="images/combOS.jpg" id="work_pic" /></td>
+				<td>
+					<span id="work_name">combOS2</span><br>
+					<p>
+						Hot Soup Processorで作ったOSもどきです。<a href="https://hsp.tv/contest2019/cntst_fresult.html#1728">HSPコンテスト2019 JBOYSOFT賞受賞作</a><br>
+						コンテスト版のダウンロードは<a href="https://hsp.tv/contest/hspcontest1728.zip">こちら</a>。最終バージョンは<a href="https://github.com/starlight6470re/combOS2">GitHub</a>にて公開中。
+					</p>
+				</td>
+			</table>
+			<table>
+				<td><img src="images/homepage.png" id="work_pic" /></td>
+				<td>
+					<span id="work_name">ホームページ</span><br>
+					<p>
+						このホームページです。HTMLとCSS,JavaScriptで構成されています。<br />
+						ソースは<a href="https://github.com/starlight6470re/homepage">GitHub</a>にて公開しています。
+					</p>
+				</td>
+			</table>
+			<table>
+				<td><img src="images/sidtool.png" id="work_pic" /></td>
+				<td>
+					<span id="work_name">sidtool</span><br>
+					<p>
+						DokiDokiLiveのsidを元に、m3u8を抽出からtsのダウンロード、ffmpegによる結合までを一つのGUIソフトで完結できるようにしたものです。<br />
+						スクリプトやWindows向けビルドは<a href="https://github.com/starlight6470re/sidtool/">GitHub</a>にて公開しています。
+					</p>
+				</td>
+			</table>
+			<script src="https://gist.github.com/starlight6470re/45730913083cbdffb772f380994ebd63.js"></script>
+
+			<h3>これ以外にも様々な作品を鋭意制作中です</h3>
+		</div>
 
         <footer>
             <p>&copy; 2025- erga0131</p>
