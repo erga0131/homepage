@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-	<meta charset="utf-8">
-	<title>erga0131 - 作品</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="images/favicon.ico">
-	<!--works.html限定のstyle-->
-	<style>
-        #work_pic {
-            width: 18vw;
-            margin: 10px;
-            border: double 5px #39c5bb;
-        }
-        #work_name {
-            font-weight: 800;
-			font-size:1.4em;
-        }
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>erga0131 - Works</title>    
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-	<body>
+<body>
 	<!--navbar-->
 	<div id="navbar"></div>
 	<script src="nav.js"></script>
-	<h2>作品</h2>
-		<div class="haikei">
-			<table>
-				<td><img src="images/combOS.jpg" id="work_pic" /></td>
-				<td>
-					<span id="work_name">combOS2</span><br>
-					<p>
-						Hot Soup Processorで作ったOSもどきです。<a href="https://hsp.tv/contest2019/cntst_fresult.html#1728">HSPコンテスト2019 JBOYSOFT賞受賞作</a><br>
-						コンテスト版のダウンロードは<a href="https://hsp.tv/contest/hspcontest1728.zip">こちら</a>。最終バージョンは<a href="https://github.com/erga0131/combOS2">GitHub</a>にて公開中。
-					</p>
-				</td>
-			</table>
-			<table>
-				<td><img src="images/homepage.png" id="work_pic" /></td>
-				<td>
-					<span id="work_name">ホームページ</span><br>
-					<p>
-						このホームページです。HTMLとCSS,JavaScriptで構成されています。<br />
-						ソースは<a href="https://github.com/erga0131/homepage">GitHub</a>にて公開しています。
-					</p>
-				</td>
-			</table>
-			<table>
-				<td><img src="images/sidtool.png" id="work_pic" /></td>
-				<td>
-					<span id="work_name">sidtool</span><br>
-					<p>
-						DokiDokiLiveのsidを元に、m3u8を抽出からtsのダウンロード、ffmpegによる結合までを一つのGUIソフトで完結できるようにしたものです。<br />
-						スクリプトやWindows向けビルドは<a href="https://github.com/erga0131/sidtool/">GitHub</a>にて公開しています。
-					</p>
-				</td>
-			</table>
-			<script src="https://gist.github.com/erga0131/5730913083cbdffb772f380994ebd63.js"></script>
 
-			<h3>これ以外にも様々な作品を鋭意制作中です</h3>
-		</div>
-
-        <footer>
-            <p>&copy; 2025- erga0131</p>
-        </footer>
-    </body>
+  <h1><p style="color: #e12885; text-align: center;">Works</p></h1>
+  <h2>プログラム (Programming)</h2>
+      <div class="work">
+        <div class="work_image"><img src="images/combOS.jpg" alt="combOS動作スクリーンショット" width=100%></div>
+        <div class="work_description">
+          <p><span class="highlight">combOS</span></br>
+          Hot Soup Processorで作ったOSもどきです。<a href="https://hsp.tv/contest2019/cntst_fresult.html#1728">HSPコンテスト2019 JBOYSOFT賞受賞作</a>。コンテスト版のダウンロードは<a href="https://dev.onionsoft.net/seed/info.ax?id=1728">こちら</a>。最終バージョンは<a href="https://github.com/erga0131/combOS2">GitHub</a>にて公開しています。</p>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_image"><img src="images/sidtool.jpg" alt="sidtool動作スクリーンショット" width=100%></div>
+        <div class="work_description">
+          <p><span class="highlight">sidtool</span></br>
+            DokiDokiLiveのsidを元に、m3u8を抽出からtsのダウンロード、ffmpegによる結合までを一つのGUIソフトで完結できるようにしたものです。スクリプトやWindows向けビルドは<a href="https://github.com/erga0131/sidtool/">GitHub</a>にて公開しています。</p>
+        </div>
+      </div>
+      <p>その他の作品は<a href="https://github.com/erga0131/">GitHub</a>をご覧ください。</p>
+      
+    <h2>音楽/映像 (Music/Video)</h2>
+      <div class="work">
+        <div class="work_image">
+          <div class="video-container">
+            <iframe src="https://embed.nicovideo.jp/watch/sm45340239" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="work_description">
+          <p><span class="highlight">鏡写しのモノローグ</span></br>
+           初のオリジナル曲です。MusescoreとOpenUTAU、AviUtlを使用しています。YouTube版は<a href=https://youtu.be/D1R7dpgXGnE>こちら</a>から、ニコニコ動画版は<a href=https://www.nicovideo.jp/watch/sm45340239>こちら</a>からどうぞ。</p>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_image">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/l7_VYO9jXuc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="work_description">
+          <p><span class="highlight">METEOR</span></br>
+           DIVELAさんの曲の足立レイによるカバーです。MMD関連は借り物です。OpenUTAUを使用しています。YouTube版は<a href=https://youtu.be/l7_VYO9jXuc>こちら</a>からどうぞ。</p>
+        </div>
+      </div>
+      <p>その他の作品は<a href="https://youtube.com/@erga0131">YouTube</a>をご覧ください。</p>
+      
+      <h2>その他 (Others)</h2>
+      <div class="work">
+        <div class="work_image"><img src="images/icon.jpg" alt="アイコン画像" style="display: block; margin: auto; width: 60%;"></div>
+        <div class="work_description">
+          <p><span class="highlight">イラスト</span></br>
+            まだ練習中。これはアイコン用に描いたイラストです。</p>
+        </div>
+      </div>
+      
+      <div class="work">
+        <div class="work_image"><img src="images/text.jpg" alt="文章画像" style="display: block; margin: auto; width: 60%;"></div>
+        <div class="work_description">
+          <p><span class="highlight">文章</span></br>
+                        「Pythonで作るフォルマント合成音声」というテーマで某大学アマチュア無線サークルの部誌に寄稿予定です。</p>
+        </div>
+      </div>
+      
+  <footer>
+		&copy; 2025- erga0131
+	</footer>
+	
+</body>
 </html>
