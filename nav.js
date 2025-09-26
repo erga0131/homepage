@@ -9,9 +9,8 @@ data =
 <nav>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="navbar">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="works.html">作品</a></li>
-        <li><a href="iss.html">ISS追跡</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="works.html">Works</a></li>
     </ul>
 </nav>
 
@@ -25,8 +24,8 @@ data =
         top: 0;
         left: 0;
         width: 100%;
-        background: #000033;
-        opacity: 0.8;
+        background: #FFFFFF;
+        opacity: 0.95;
         padding: 10px 20px;
         display: flex;
         height: 26px;
@@ -45,7 +44,7 @@ data =
     nav ul li a {
         margin: 0 15px;
         text-decoration: none;
-        color: #fff;
+        color: #39C5BB;
         font-size: 18px;
     }
 
@@ -55,7 +54,7 @@ data =
         }
         .hamburger {
         display: block;
-        color: #FFFFFF;
+        color: #39C5BB;
         font-size: 28px;
         }
         nav ul {
@@ -64,8 +63,8 @@ data =
         top: 60px;
         left: 0;
         width: 100%;
-        background: #000044;
-        opacity: 0.9;
+        background: #FFFFFF;
+        opacity: 0.95;
         display: none;
         }
         nav ul.active {
